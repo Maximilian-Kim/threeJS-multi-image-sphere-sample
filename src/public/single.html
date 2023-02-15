@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>My first three.js app</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div id="main"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/addon/three.module.js",
+          "three/addons/": "/addon/",
+          "OrbitControls": "/addon/OrbitControls.js",
+          "CSS3DRenderer": "/addon/CSS3DRenderer.js"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import { init, animate } from '/single.js'
+
+      init()
+      animate()
+    </script>
+  </body>
+</html>
